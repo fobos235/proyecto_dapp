@@ -14,22 +14,21 @@ class Principal:
             print("2) Consultar producto")
             print("3) Modificar costo")
             print("4) Inventario")
+            print("5) Salir")
             op = input("Opción: ")
 
             if op == "1":
-                prod = p.Productos()
-                self.prods.append(prod)
+                self.prods.registrar()
             elif op == "2":
-                val = input("Ingrese clave o nombre del producto: ")
-                for i in range (0, len(self.prods)):
-                    print(self.prods[i].consultar)
+                self.prods.consultar()
             elif op == "3":
                 val = input("Ingrese clave del producto a modificar: ")
-                for i in range (0, 0, len(self.prods)):
-                    self.prods[i].modPrecio(val)
+                self.prods.cambiarCosto()
             elif op == "4":
                 for i in range (0, len(self.prods)):
                     print(self.prods.inventario())
+            elif op == "5":
+                exit()
 
 pri = Principal()
 pri.menu()
