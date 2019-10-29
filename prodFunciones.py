@@ -15,8 +15,12 @@ class MetodosProd:
     def modPrecio(self, clave):
         if self.clave == clave:
             costo = float(input("Nuevo costo: "))
+            self.costo = costo
             print("Costo actualizado\n")
         else:
             print("No se encontró el producto\n")
+
+    def imprimir(self):
+        return self.clave + ") " + self.nombre + "\t$"+ str(self.costo) + "\t" + self.categoria + "\t" +self.descripcion
     
     

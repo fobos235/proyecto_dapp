@@ -21,6 +21,7 @@ class Productos:
 
     def inventario(self):
         # Esto no funciona aún
+        print("CLAVE \tNOMBRE\t \tCOSTO\tCATEGORIA\tDESCRIPCIÓN")
+        
         for i in range(0, len(self.prods)):
-            self.inv = self.prods[i]
-
+            print(self.prods[i].imprimir())

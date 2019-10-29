@@ -22,11 +22,10 @@ class Principal:
             elif op == "2":
                 self.prods.consultar()
             elif op == "3":
-                val = input("Ingrese clave del producto a modificar: ")
+                # val = input("Ingrese clave del producto a modificar: ")
                 self.prods.cambiarCosto()
             elif op == "4":
-                for i in range (0, len(self.prods)):
-                    print(self.prods.inventario())
+                self.prods.inventario()
             elif op == "5":
                 exit()
 
